@@ -1352,6 +1352,7 @@ textarea.contactUs__input {
     font-weight: bold;
     bottom: 10px;
     left: 50%;
+    color: var(--color-bg);
     transform: translateX(-50%);
     background: rgba(27, 83, 157, 0.7);
     border: none;

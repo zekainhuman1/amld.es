@@ -34,6 +34,31 @@
       "url": "https://www.amld.es"
     }
     </script>
+  <script>
+    // Отримуємо мову браузера
+    let browserLang = navigator.language || navigator.userLanguage;
+    browserLang = browserLang.split("-")[0]; // Беремо тільки код мови (es, en)
+
+    // Отримуємо поточну мову з URL
+    const isEnglish = window.location.pathname.startsWith("/en");
+
+    // Отримуємо вибрану мову з localStorage
+    const selectedLanguage = localStorage.getItem("selectedLanguage");
+
+    // Якщо вибрана мова збережена в localStorage, використовуємо її
+    if (selectedLanguage) {
+      if (selectedLanguage === "/en" && !isEnglish) {
+        window.location.href = "/en";
+      } else if (selectedLanguage === "/" && isEnglish) {
+        window.location.href = "/";
+      }
+    } else {
+      // Якщо мова браузера не іспанська і сторінка ще не /en → переадресовуємо
+      if (!isEnglish && browserLang !== "es") {
+        window.location.href = "/en";
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -120,7 +145,7 @@
             <picture class="services__img">
               <source srcset="/img/General_installation.avif" type="image/avif">
               <source srcset="/img/General_installation.webp" type="image/webp">
-              <img src="/img/General_installation.png" alt="General installation" loading="lazy">
+              <img src="/img/General_installation.png" alt="Redes Generales" loading="lazy">
             </picture>
             <p class="services__text">Redes <strong>Generales</strong></p>
           </li>
@@ -128,7 +153,7 @@
             <picture class="services__img">
               <source srcset="/img/Spas_Fountains_and_Artificial_leaks.avif" type="image/avif">
               <source srcset="/img/Spas_Fountains_and_Artificial_leaks.webp" type="image/webp">
-              <img src="/img/Spas_Fountains_and_Artificial_leaks.png" alt="Spas Fountains and Artificial leaks"
+              <img src="/img/Spas_Fountains_and_Artificial_leaks.png" alt="Balnearios, fuentes y lagos artificiales"
                 loading="lazy">
             </picture>
             <p class="services__text"><strong>Balnearios, fuentes</strong> y <strong>lagos artificiales</strong></p>
@@ -137,7 +162,7 @@
             <picture class="services__img">
               <source srcset="/img/Indoors.avif" type="image/avif">
               <source srcset="/img/Indoors.webp" type="image/webp">
-              <img src="/img/Indoors.png" alt="Indoors" loading="lazy">
+              <img src="/img/Indoors.png" alt="Sanitarios" loading="lazy">
             </picture>
             <p class="services__text"><strong>Sanitarios</strong></p>
           </li>
@@ -145,7 +170,7 @@
             <picture class="services__img">
               <source srcset="/img/Floor_heating.avif" type="image/avif">
               <source srcset="/img/Floor_heating.webp" type="image/webp">
-              <img src="/img/Floor_heating.png" alt="Floor heating" loading="lazy">
+              <img src="/img/Floor_heating.png" alt="Calefacción por suelo" loading="lazy">
             </picture>
             <p class="services__text"><strong>Calefacción</strong> por suelo</p>
           </li>
@@ -153,7 +178,7 @@
             <picture class="services__img">
               <source srcset="/img/Elimination_of_leaks.avif" type="image/avif">
               <source srcset="/img/Elimination_of_leaks.webp" type="image/webp">
-              <img src="/img/Elimination_of_leaks.png" alt="Elimination of leaks" loading="lazy">
+              <img src="/img/Elimination_of_leaks.png" alt="Eliminación de fugas" loading="lazy">
             </picture>
             <p class="services__text"><strong>Eliminación</strong> de fugas</p>
           </li>
@@ -161,7 +186,7 @@
             <picture class="services__img">
               <source srcset="/img/Swimming_pools_and_Jacuzzis.avif" type="image/avif">
               <source srcset="/img/Swimming_pools_and_Jacuzzis.webp" type="image/webp">
-              <img src="/img/Swimming_pools_and_Jacuzzis.png" alt="Swimming pools and Jacuzzis" loading="lazy">
+              <img src="/img/Swimming_pools_and_Jacuzzis.png" alt="Piscinas y jacuzzis" loading="lazy">
             </picture>
             <p class="services__text"><strong>Piscinas</strong> y <strong>jacuzzis</strong></p>
           </li>
@@ -169,7 +194,7 @@
             <picture class="services__img">
               <source srcset="/img/Leaks_in_houses_and_gardens.avif" type="image/avif">
               <source srcset="/img/Leaks_in_houses_and_gardens.webp" type="image/webp">
-              <img src="/img/Leaks_in_houses_and_gardens.png" alt="Leaks in houses and gardens" loading="lazy">
+              <img src="/img/Leaks_in_houses_and_gardens.png" alt="Fugas en casas y jardines" loading="lazy">
             </picture>
             <p class="services__text"><strong>Fugas</strong> en casas y <strong>jardines</strong></p>
           </li>
@@ -177,7 +202,7 @@
             <picture class="services__img">
               <source srcset="/img/Conditioning.avif" type="image/avif">
               <source srcset="/img/Conditioning.webp" type="image/webp">
-              <img src="/img/Conditioning.png" alt="Conditioning" loading="lazy">
+              <img src="/img/Conditioning.png" alt="Acondicionamiento" loading="lazy">
             </picture>
             <p class="services__text"><strong>Acondicionamiento</strong></p>
           </li>
@@ -185,7 +210,8 @@
             <picture class="services__img">
               <source srcset="/img/Piece_waterfalls_and_sewers.avif" type="image/avif">
               <source srcset="/img/Piece_waterfalls_and_sewers.webp" type="image/webp">
-              <img src="/img/Piece_waterfalls_and_sewers.png" alt="Piece waterfalls and sewers" loading="lazy">
+              <img src="/img/Piece_waterfalls_and_sewers.png" alt="Cascadas artificiales y alcantarillas en el
+              sistema" loading="lazy">
             </picture>
             <p class="services__text"><strong>Cascadas artificiales</strong> y <strong>alcantarillas</strong> en el
               sistema</p>
@@ -194,7 +220,7 @@
             <picture class="services__img">
               <source srcset="/img/Gas_leak_detection.avif" type="image/avif">
               <source srcset="/img/Gas_leak_detection.webp" type="image/webp">
-              <img src="/img/Gas_leak_detection.png" alt="Gas leak detection" loading="lazy">
+              <img src="/img/Gas_leak_detection.png" alt="Detección de fugas de gas" loading="lazy">
             </picture>
             <p class="services__text"><strong>Detección</strong> de fugas de <strong>gas</strong></p>
           </li>
@@ -202,7 +228,7 @@
             <picture class="services__img">
               <source srcset="/img/Tube_detection_with_tracking_chip.avif" type="image/avif">
               <source srcset="/img/Tube_detection_with_tracking_chip.webp" type="image/webp">
-              <img src="/img/Tube_detection_with_tracking_chip.png" alt="Tube detection with tracking chip"
+              <img src="/img/Tube_detection_with_tracking_chip.png" alt="Detección de tubos con chip de seguimiento"
                 loading="lazy">
             </picture>
             <p class="services__text"><strong>Detección de tubos</strong> con chip de <strong>seguimiento</strong></p>
@@ -211,7 +237,7 @@
             <picture class="services__img">
               <source srcset="/img/Leakage_measurement_using_bucket.avif" type="image/avif">
               <source srcset="/img/Leakage_measurement_using_bucket.webp" type="image/webp">
-              <img src="/img/Leakage_measurement_using_bucket.png" alt="Leakage measurement using bucket"
+              <img src="/img/Leakage_measurement_using_bucket.png" alt="Medición de fugas mediante balde"
                 loading="lazy">
             </picture>
             <p class="services__text"><strong>Medición</strong> de fugas mediante <strong>balde</strong></p>
@@ -504,7 +530,7 @@
         encontrar más información sobre ellos a continuación.</p>
       <div class="reviews__carousel" role="region" aria-labelledby="reviews-title">
         <button class="reviews__nav reviews__nav--prev" aria-label="Previous review"></button>
-        <div class="reviews__content" role="list">
+        <div class="reviews__content">
           <picture class="reviews__item">
             <source srcset="/img/comment_1ES.avif" type="image/avif">
             <source srcset="/img/comment_1ES.webp" type="image/webp">
@@ -523,7 +549,7 @@
         </div>
         <button class="reviews__nav reviews__nav--next" aria-label="Next review"></button>
       </div>
-      <div class="reviews__pagination" aria-label="Review pagination"></div>
+      <div class="reviews__pagination"></div>
       <button class="show-more-btn" id="showMoreBtnReviews">Show more</button>
     </section>
     <section class="contactUs" id="contactUs" aria-labelledby="contactUs-title">
@@ -548,15 +574,20 @@
       </div>
       <form class="contactUs__form" id="contactForm" aria-labelledby="contactUs-title">
         <label for="name" class="visually-hidden">Nombre</label>
-        <input type="text" class="contactUs__input" id="name" placeholder="Name" aria-required="true">
+        <input type="text" class="contactUs__input" id="name" placeholder="Name" aria-required="true" autocomplete="name">
+        
         <label for="email" class="visually-hidden">Email</label>
-        <input type="email" class="contactUs__input" id="email" placeholder="Email" aria-required="true">
+        <input type="email" class="contactUs__input" id="email" placeholder="Email" aria-required="true" autocomplete="email">
+        
         <label for="phone" class="visually-hidden">Teléfono</label>
-        <input type="tel" class="contactUs__input" id="phone" placeholder="Phone" aria-required="true">
+        <input type="tel" class="contactUs__input" id="phone" placeholder="Phone" aria-required="true" autocomplete="tel">
+        
         <label for="message" class="visually-hidden">Mensaje</label>
-        <textarea class="contactUs__input" id="message" placeholder="Message" aria-required="true"></textarea>
+        <textarea class="contactUs__input" id="message" placeholder="Message" aria-required="true" autocomplete="off"></textarea>
+        
         <button type="submit" class="contactUs__button">Enviar</button>
         <p class="contactUs__error" id="errorMessage" aria-live="polite" role="alert"></p>
+        
         <label class="contactUs__privacy">
           <input type="checkbox" id="privacyPolicy" checked aria-required="true">
           <span>Al enviar este formulario, aceptas nuestra <a href="/privacy-policy">Política de Privacidad</a>. Tus

@@ -200,8 +200,8 @@
 }
 
 .whatsapp__img {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.3rem;
+  height: 2.3rem;
   margin: 0 var(--spacing-sm) 0 0;
 }
 
@@ -330,6 +330,7 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 50%;
+  gap: var(--spacing-md);
 }
 
 .hero__text {
@@ -397,12 +398,9 @@ p {
   }
 }
 
-
-
-
 .callNow {
   margin: var(--spacing-lg) 0;
-  padding: var(--spacing-md);
+  padding: 0 var(--spacing-md);
   font-family: Cyntho, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 4vw, 2rem);
@@ -410,7 +408,8 @@ p {
   width: clamp(250px, 25vw, 450px);
   min-width: max-content;
   gap: var(--spacing-sm);
-  height: 6vh;
+  height: 3rem;
+  min-height: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,14 +468,15 @@ p {
 
 .messageUs,
 .contactUs__button {
-  padding: var(--spacing-md) 0;
+  /* padding: var(--spacing-md) 0; */
   font-family: Cyntho, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
   width: clamp(250px, 25vw, 450px);
   min-width: max-content;
   gap: var(--spacing-lg);
-  height: 4vh;
+  height: 2rem;
+  min-height: max-content;
   line-height: 0;
   display: flex;
   align-items: center;
@@ -850,8 +850,9 @@ h3 {
 .dangerous__img {
   display: block;
   max-width: 30vw;
+  width: 100%;
   height: auto;
-  max-height: 35vh;
+  max-height: 30vh;
   object-fit: contain;
 }
 
@@ -1267,8 +1268,7 @@ textarea.contactUs__input {
   .techMeans__content,
   .advantages__list,
   .aboutUs__container,
-  .services__items,
-  .services__description {
+  .services__items{
     gap: var(--spacing-sm);
   }
 

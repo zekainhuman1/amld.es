@@ -152,32 +152,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Перевірка наявності елемента languageSwitcher
     if (languageButton) {
-        // Отримуємо мову браузера
-        let browserLang = navigator.language || navigator.userLanguage;
-        browserLang = browserLang.split("-")[0]; // Беремо тільки код мови (es, en)
-
-        // Отримуємо поточну мову з URL
-        const isEnglish = window.location.pathname.startsWith("/en");
-
-        // Отримуємо вибрану мову з localStorage
-        const selectedLanguage = localStorage.getItem("selectedLanguage");
-
-        // Якщо вибрана мова збережена в localStorage, використовуємо її
-        if (selectedLanguage) {
-            if (selectedLanguage === "/en" && !isEnglish) {
-                window.location.href = "/en";
-            } else if (selectedLanguage === "/" && isEnglish) {
-                window.location.href = "/";
-            }
-        } else {
-            // Якщо мова браузера не іспанська і сторінка ще не /en → переадресовуємо
-            if (!isEnglish && browserLang !== "es") {
-                window.location.href = "/en";
-            }
-        }
-
         // Обробник натискання на кнопку
         languageButton.addEventListener("click", function () {
+            const isEnglish = window.location.pathname.startsWith("/en");
             const newPath = isEnglish ? "/" : "/en"; // Змінюємо мову
             localStorage.setItem("selectedLanguage", newPath); // Запам’ятовуємо вибір
             window.location.href = newPath; // Перенаправляємо

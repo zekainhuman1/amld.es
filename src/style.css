@@ -436,8 +436,8 @@ p {
 .shine {
   animation-name: shineAnimation;
   -webkit-animation-name: shineAnimation;
-  animation-duration: 5s;
-  -webkit-animation-duration: 5s;
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(.12, .89, .98, .47);
@@ -457,13 +457,13 @@ p {
       rgba(255, 255, 255, 0.0) 57%, 
       rgba(255, 255, 255, 0.0) 100%
     );
-    background-position: -250px -250px;
-    background-size: 700px 300px;
+    background-position: 0%;
+    background-size: 100%;
   }
 
   100% {
     background-repeat: no-repeat;
-    background-position: 250px 250px;
+    background-position: 100%;
   }
 }
 

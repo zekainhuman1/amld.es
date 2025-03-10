@@ -83,7 +83,7 @@
   background-color: var(--color-accent);
   justify-content: center;
   align-items: center;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
   padding: 0 var(--spacing-md);
 }
 
@@ -360,7 +360,7 @@ p {
   color: var(--color-brand);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: var(--spacing-lg) 0;
+  margin-bottom: var(--spacing-lg);
   overflow-wrap: normal;
 }
 

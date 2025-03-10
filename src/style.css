@@ -458,12 +458,12 @@ p {
       rgba(255, 255, 255, 0.0) 100%
     );
     background-position: 0%;
-    background-size: left;
+    background-size: -250px;
   }
 
   100% {
     background-repeat: no-repeat;
-    background-position: end;
+    background-position: 250px;
   }
 }
 

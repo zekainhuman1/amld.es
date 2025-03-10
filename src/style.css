@@ -457,13 +457,13 @@ p {
       rgba(255, 255, 255, 0.0) 57%, 
       rgba(255, 255, 255, 0.0) 100%
     );
-    background-position: 0%;
+    background-position: -13vw;
     background-size: 100%;
   }
 
   100% {
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: 13vw;
   }
 }
 

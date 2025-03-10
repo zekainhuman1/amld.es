@@ -397,16 +397,7 @@ p {
   }
 }
 
-.shine {
-  animation-name: shineAnimation;
-  -webkit-animation-name: shineAnimation;
-  animation-duration: 5s;
-  -webkit-animation-duration: 5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(.12, .89, .98, .47);
-  -webkit-animation-timing-function: cubic-bezier(.12, .89, .98, .47);
-}
+
 
 
 .callNow {
@@ -415,7 +406,7 @@ p {
   font-family: Cyntho, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 4vw, 2rem);
-  ;
+  line-height: 0;
   width: clamp(250px, 25vw, 450px);
   min-width: max-content;
   gap: var(--spacing-sm);
@@ -442,10 +433,30 @@ p {
   background: #AD1F1A;
 }
 
+.shine {
+  animation-name: shineAnimation;
+  -webkit-animation-name: shineAnimation;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.12, .89, .98, .47);
+  -webkit-animation-timing-function: cubic-bezier(.12, .89, .98, .47);
+}
+
 @keyframes shineAnimation {
   0% {
     background-repeat: no-repeat;
-    background-image: -webkit-linear-gradient(top left, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.0) 45%, rgba(255, 255, 255, 0.5) 48%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.5) 52%, rgba(255, 255, 255, 0.0) 57%, rgba(255, 255, 255, 0.0) 100%);
+    background-image: linear-gradient(
+      135deg, 
+      rgba(255, 255, 255, 0.0) 0%, 
+      rgba(255, 255, 255, 0.0) 45%, 
+      rgba(255, 255, 255, 0.5) 48%, 
+      rgba(255, 255, 255, 0.8) 50%, 
+      rgba(255, 255, 255, 0.5) 52%, 
+      rgba(255, 255, 255, 0.0) 57%, 
+      rgba(255, 255, 255, 0.0) 100%
+    );
     background-position: -250px -250px;
     background-size: 700px 300px;
   }
@@ -466,6 +477,7 @@ p {
   min-width: max-content;
   gap: var(--spacing-lg);
   height: 4vh;
+  line-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;

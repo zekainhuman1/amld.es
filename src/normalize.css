@@ -18,6 +18,11 @@ body {
     overflow-x: hidden;
 }
 
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
 img,
 picture,
 video,

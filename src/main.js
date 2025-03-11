@@ -66,6 +66,47 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoScroll();
     updateCarousel();
 
+    const carouselContent = document.querySelector(".carousel__content");
+    const carouselItems = document.querySelectorAll(".carousel__item");
+    const carouselPagination = document.querySelector(".carousel__pagination");
+
+    let carouselCurrentIndex = 0;
+    let carouselInterval;
+
+    carouselItems.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("carousel__dot");
+        if (index === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => {
+            carouselCurrentIndex = index;
+            updateHeroCarousel();
+        });
+        carouselPagination.appendChild(dot);
+
+        carouselItems[index].addEventListener("click", () => {
+            carouselCurrentIndex = index;
+            updateHeroCarousel();
+        });
+    });
+
+    function updateHeroCarousel() {
+        carouselContent.style.transform = `translateX(-${carouselCurrentIndex * 100}%)`;
+        document.querySelectorAll(".carousel__dot").forEach((dot, index) => {
+            dot.classList.toggle("active", index === carouselCurrentIndex);
+        });
+    }
+
+    function nextHeroItem() {
+        carouselCurrentIndex = (carouselCurrentIndex + 1) % carouselItems.length;
+        updateHeroCarousel();
+    }
+
+    function startHeroAutoScroll() {
+        carouselInterval = setInterval(nextHeroItem, 3000);
+    }
+
+    startHeroAutoScroll();
+
     // функцію toggleModal
     function toggleModal() {
         const modal = document.getElementById('privacyPolicyModal');

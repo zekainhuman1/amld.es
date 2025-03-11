@@ -10,7 +10,7 @@
   <title>Servicios Profesionales de Detección de Fugas - American Leaks Detection</title>
   <link rel="stylesheet" href="./src/normalize.css">
   <link rel="stylesheet" href="./src/style.css">
-  <link rel="preload" href="/img/hero.avif" as="image">
+  <!-- <link rel="preload" href="/img/hero.avif" as="image"> -->
   <!-- <link rel="preload" as="font" type="font/woff2" href="./fonts/Montserrat-VariableFont_wght.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="./fonts/cyntho-slab-pro-bold.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="./fonts/Cyntho_Slab_Pro_Regular.woff2" crossorigin> -->
@@ -35,17 +35,10 @@
     }
     </script>
   <script>
-    // Отримуємо мову браузера
     let browserLang = navigator.language || navigator.userLanguage;
-    browserLang = browserLang.split("-")[0]; // Беремо тільки код мови (es, en)
-
-    // Отримуємо поточну мову з URL
+    browserLang = browserLang.split("-")[0];
     const isEnglish = window.location.pathname.startsWith("/en");
-
-    // Отримуємо вибрану мову з localStorage
     const selectedLanguage = localStorage.getItem("selectedLanguage");
-
-    // Якщо вибрана мова збережена в localStorage, використовуємо її
     if (selectedLanguage) {
       if (selectedLanguage === "/en" && !isEnglish) {
         window.location.href = "/en";
@@ -53,7 +46,6 @@
         window.location.href = "/";
       }
     } else {
-      // Якщо мова браузера не іспанська і сторінка ще не /en → переадресовуємо
       if (!isEnglish && browserLang !== "es") {
         window.location.href = "/en";
       }
@@ -66,7 +58,7 @@
     <nav class="nav">
       <div class="header__logo">
         <a href="/" aria-label="Home">
-          <picture>
+          <picture class="header__img" >
             <source srcset="./img/amld_wl.avif" type="image/avif">
             <source srcset="./img/amld_wl.webp" type="image/webp">
             <img src="./img/amld_wl.png" alt="AMERICAN LEAKS DETECTIONS">
@@ -117,13 +109,54 @@
               Ahora</span></button>
           <button class="messageUs" aria-label="Contact Us"><a href="#contactUs">Contáctenos</a></button>
         </div>
-
       </div>
-      <picture class="hero__img">
-        <source srcset="/img/hero.avif" type="image/avif">
-        <source srcset="/img/hero.webp" type="image/webp">
-        <img src="/img/hero.jpg" alt="hero image">
-      </picture>
+      <div class="carousel">
+        <div class="carousel__content">
+          <picture class="carousel__item" width="558px" height="500px">
+            <source media="(min-width: 602px)" srcset="/img/hero1.avif" type="image/avif">
+            <source media="(max-width: 601px)" srcset="/img/hero1x360.avif" type="image/avif">
+            <source media="(min-width: 602px)" srcset="/img/hero1.webp" type="image/webp">
+            <source media="(max-width: 601px)" srcset="/img/hero1x360.webp" type="image/webp">
+            <img src="/img/hero1.jpg" alt="hero image">
+          </picture>
+          <picture class="carousel__item" width="558px" height="500px">
+            <source media="(min-width: 602px)" srcset="/img/hero2.avif" type="image/avif">
+            <source media="(max-width: 601px)" srcset="/img/hero2x360.avif" type="image/avif">
+            <source media="(min-width: 602px)" srcset="/img/hero2.webp" type="image/webp">
+            <source media="(max-width: 601px)" srcset="/img/hero2x360.webp" type="image/webp">
+            <img src="/img/hero2.jpg" alt="hero image">
+          </picture>
+          <picture class="carousel__item" width="558px" height="500px">
+            <source media="(min-width: 602px)" srcset="/img/hero3.avif" type="image/avif">
+            <source media="(max-width: 601px)" srcset="/img/hero3x360.avif" type="image/avif">
+            <source media="(min-width: 602px)" srcset="/img/hero3.webp" type="image/webp">
+            <source media="(max-width: 601px)" srcset="/img/hero3x360.webp" type="image/webp">
+            <img src="/img/hero3.jpg" alt="hero image">
+          </picture>
+          <picture class="carousel__item" width="558px" height="500px">
+            <source media="(min-width: 602px)" srcset="/img/hero4.avif" type="image/avif">
+            <source media="(max-width: 601px)" srcset="/img/hero4x360.avif" type="image/avif">
+            <source media="(min-width: 602px)" srcset="/img/hero4.webp" type="image/webp">
+            <source media="(max-width: 601px)" srcset="/img/hero4x360.webp" type="image/webp">
+            <img src="/img/hero4.jpg" alt="hero image">
+          </picture>
+          <picture class="carousel__item" width="558px" height="500px">
+            <source media="(min-width: 602px)" srcset="/img/hero5.avif" type="image/avif">
+            <source media="(max-width: 601px)" srcset="/img/hero5x360.avif" type="image/avif">
+            <source media="(min-width: 602px)" srcset="/img/hero5.webp" type="image/webp">
+            <source media="(max-width: 601px)" srcset="/img/hero5x360.webp" type="image/webp">
+            <img src="/img/hero5.jpg" alt="hero image">
+          </picture>
+          <picture class="carousel__item" width="558px" height="500px">
+            <source media="(min-width: 602px)" srcset="/img/hero6.avif" type="image/avif">
+            <source media="(max-width: 601px)" srcset="/img/hero6x360.avif" type="image/avif">
+            <source media="(min-width: 602px)" srcset="/img/hero6.webp" type="image/webp">
+            <source media="(max-width: 601px)" srcset="/img/hero6x360.webp" type="image/webp">
+            <img src="/img/hero6.jpg" alt="hero image">
+          </picture>
+        </div>
+        <div class="carousel__pagination"></div>
+      </div>
     </section>
 
     <section class="services section-hiden" id="services" aria-labelledby="services-title">
@@ -574,20 +607,24 @@
       </div>
       <form class="contactUs__form" id="contactForm" aria-labelledby="contactUs-title">
         <label for="name" class="visually-hidden">Nombre</label>
-        <input type="text" class="contactUs__input" id="name" placeholder="Name" aria-required="true" autocomplete="name">
-        
+        <input type="text" class="contactUs__input" id="name" placeholder="Name" aria-required="true"
+          autocomplete="name">
+
         <label for="email" class="visually-hidden">Email</label>
-        <input type="email" class="contactUs__input" id="email" placeholder="Email" aria-required="true" autocomplete="email">
-        
+        <input type="email" class="contactUs__input" id="email" placeholder="Email" aria-required="true"
+          autocomplete="email">
+
         <label for="phone" class="visually-hidden">Teléfono</label>
-        <input type="tel" class="contactUs__input" id="phone" placeholder="Phone" aria-required="true" autocomplete="tel">
-        
+        <input type="tel" class="contactUs__input" id="phone" placeholder="Phone" aria-required="true"
+          autocomplete="tel">
+
         <label for="message" class="visually-hidden">Mensaje</label>
-        <textarea class="contactUs__input" id="message" placeholder="Message" aria-required="true" autocomplete="off"></textarea>
-        
+        <textarea class="contactUs__input" id="message" placeholder="Message" aria-required="true"
+          autocomplete="off"></textarea>
+
         <button type="submit" class="contactUs__button">Enviar</button>
         <p class="contactUs__error" id="errorMessage" aria-live="polite" role="alert"></p>
-        
+
         <label class="contactUs__privacy">
           <input type="checkbox" id="privacyPolicy" checked aria-required="true">
           <span>Al enviar este formulario, aceptas nuestra <a href="/privacy-policy">Política de Privacidad</a>. Tus

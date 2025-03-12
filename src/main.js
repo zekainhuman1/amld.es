@@ -1,4 +1,6 @@
-// import './style.css'
+import './normalize.css';
+import './style.css';
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const content = document.querySelector(".reviews__content");

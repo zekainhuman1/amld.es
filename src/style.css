@@ -725,7 +725,7 @@ p {
 
 .techMeans__img {
   max-width: 200px;
-  width: auto;
+  width: 100%;
   overflow: hidden;
   object-fit: contain;
 }
@@ -766,9 +766,9 @@ p {
   gap: var(--spacing-md);
 }
 
-.workProces__img {
-  width: 30%;
-  height: auto;
+.workProces__img * {
+  min-width: 150px;
+  height: 150px;
   overflow: hidden;
   object-fit: contain;
 }
@@ -859,6 +859,7 @@ p {
 }
 
 .dengerous__text {
+  flex: 2;
   width: 100%;
   font-size: var(--font-size-small);
   /* background-color: rgba(27, 83, 157, 0.6); */
@@ -873,11 +874,13 @@ p {
 }
 
 .dangerous__img {
+  flex: 1;
+}
+
+.dangerous__img * {
   display: block;
-  max-width: 30vw;
   width: 100%;
   height: auto;
-  max-height: 30vh;
   object-fit: contain;
 }
 
@@ -1358,6 +1361,11 @@ textarea.contactUs__input {
     font-size: var(--font-size-small);
   }
 
+  .dangerous__content {
+    flex-direction: column;
+    padding: 0 var(--spacing-lg);
+  }
+
   .nav,
   .whatsapp__text {
     font-size: 0.93rem;
@@ -1451,8 +1459,6 @@ textarea.contactUs__input {
   .contactUs__bottom {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    justify-items: center;
   }
 
   .aboutUs__content {
@@ -1576,11 +1582,6 @@ textarea.contactUs__input {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .dangerous__content {
-    flex-direction: column;
-    padding: 0 var(--spacing-lg);
-  }
-
   .dangerous__img {
     max-width: 80%;
   }
@@ -1603,7 +1604,6 @@ textarea.contactUs__input {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .workProces__img,
   .workProces__description,
   .workProces__text {
     max-width: 50vw;

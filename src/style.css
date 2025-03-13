@@ -542,8 +542,10 @@ p {
 
 .carousel__item {
   flex: 0 0 100%;
-  max-width: 100%;
-  height: auto;
+}
+
+.carousel__item * {
+  height: 100%;
 }
 
 .carousel__pagination {
@@ -859,7 +861,7 @@ p {
 .dengerous__text {
   width: 100%;
   font-size: var(--font-size-small);
-  background-color: rgba(27, 83, 157, 0.51);
+  background-color: rgba(27, 83, 157, 0.7);
   backdrop-filter: blur(5px);
   padding: var(--spacing-md);
   border-radius: var(--border-radius);

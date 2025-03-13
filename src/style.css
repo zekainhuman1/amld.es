@@ -543,6 +543,7 @@ p {
 .carousel__item {
   flex: 0 0 100%;
   max-width: 100%;
+  height: auto;
 }
 
 .carousel__pagination {
@@ -581,8 +582,9 @@ p {
   align-items: center;
 }
 
-.aboutUs__img {
-  max-width: 50%;
+.aboutUs__img * {
+  flex-shrink: 0;
+  max-width: 100%;
   height: auto;
   overflow: hidden;
   object-fit: cover;
@@ -645,6 +647,12 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.services__img *{
+  flex-shrink: 0;
+  max-width: 175px;
+  max-height: 175px;
 }
 
 

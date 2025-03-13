@@ -861,8 +861,8 @@ p {
 .dengerous__text {
   width: 100%;
   font-size: var(--font-size-small);
-  background-color: rgba(27, 83, 157, 0.6);
-  /* background-color: var(--color-brand); */
+  /* background-color: rgba(27, 83, 157, 0.6); */
+  background-color: var(--color-brand);
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
 }

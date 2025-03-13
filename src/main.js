@@ -239,25 +239,5 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("reviews").classList.remove("section-hiden");
         this.style.display = "none"; // Ховаємо кнопку після натискання
     });
-
-    // Додаємо обробку свайпів для каруселі
-    let startX;
-    let endX;
-
-    carouselContent.addEventListener("touchstart", (event) => {
-        startX = event.touches[0].clientX;
-    });
-
-    carouselContent.addEventListener("touchmove", (event) => {
-        endX = event.touches[0].clientX;
-    });
-
-    carouselContent.addEventListener("touchend", () => {
-        if (startX > endX + 50) {
-            nextHeroItem();
-        } else if (startX < endX - 50) {
-            prevItem();
-        }
-    });
 });
 

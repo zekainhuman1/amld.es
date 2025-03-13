@@ -859,7 +859,7 @@ p {
 .dengerous__text {
   width: 100%;
   font-size: var(--font-size-small);
-  background-color: rgba(27, 83, 157, 0.4);
+  background-color: rgba(27, 83, 157, 0.51);
   backdrop-filter: blur(5px);
   padding: var(--spacing-md);
   border-radius: var(--border-radius);

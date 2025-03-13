@@ -706,7 +706,7 @@ p {
 
 .techMeans__item {
   max-width: 500px;
-  min-width: 300px;
+  min-width: 250px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -726,7 +726,8 @@ p {
 }
 
 .techMeans__text {
-  max-width: 350px;
+  max-width: 300px;
+  /* min-width: 300px; */
   font-size: var(--font-size-small);
 }
 
@@ -748,30 +749,27 @@ p {
 }
 
 .workProces__item {
-  max-width: 45vw;
+  /* max-width: 45vw; */
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--spacing-md);
-  padding: var(--spacing-md);
 }
 
 .workProces__img {
-  width: auto;
-  max-width: 20vw;
+  width: 30%;
   height: auto;
-  max-height: 30vh;
   overflow: hidden;
   object-fit: contain;
 }
 
 .workProces__description {
-  max-width: 30vw;
+  max-width: 70%;
 }
 
 .workProces__text {
-  width: 100%;
-  max-width: 30vw;
+  /* min-width: 50%; */
+  /* max-width: 100%; */
   font-size: var(--font-size-body);
 }
 
@@ -1251,11 +1249,10 @@ textarea.contactUs__input {
 /* media query */
 
 @media (max-width: 1123px) {
-
   .techMeans__item {
-    flex-direction: column;
+    max-width: 400px;
   }
-
+  
   .nav,
   .whatsapp__text {
     font-size: 1rem;
@@ -1268,8 +1265,9 @@ textarea.contactUs__input {
 }
 
 @media (max-width: 944px) {
-
-
+  .techMeans__item {
+    flex-direction: column;
+  }
 
   .shine {
     animation-duration: 2s; /* Зменшуємо тривалість анімації */
@@ -1363,10 +1361,6 @@ textarea.contactUs__input {
   .whatsapp {
     display: none;
   }
-
-  /* .techMeans__img {
-    max-width: 25vw;
-  } */
 
   .workProces__item {
     flex-direction: column;
@@ -1503,6 +1497,7 @@ textarea.contactUs__input {
 }
 
 @media (max-width: 601px) {
+
   .carousel {
     max-width: 360px;
   }
@@ -1605,10 +1600,7 @@ textarea.contactUs__input {
   }
 
   .reviews__text,
-  .techMeans__item,
-  .workProces__item,
-  .techMeans__description,
-  .techMeans__text {
+  .workProces__item {
     max-width: 100%;
   }
 

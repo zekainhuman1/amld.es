@@ -1,5 +1,5 @@
-import './normalize.css';
-import './style.css';
+import './normalize.min.css';
+import './style.min.css';
 
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -469,16 +469,14 @@ p {
 @keyframes shineAnimation {
   0% {
     background-repeat: no-repeat;
-    background-image: linear-gradient(
-      135deg, 
-      rgba(255, 255, 255, 0.0) 0%, 
-      rgba(255, 255, 255, 0.0) 45%, 
-      rgba(255, 255, 255, 0.5) 48%, 
-      rgba(255, 255, 255, 0.8) 50%, 
-      rgba(255, 255, 255, 0.5) 52%, 
-      rgba(255, 255, 255, 0.0) 57%, 
-      rgba(255, 255, 255, 0.0) 100%
-    );
+    background-image: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.0) 0%,
+        rgba(255, 255, 255, 0.0) 45%,
+        rgba(255, 255, 255, 0.5) 48%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.5) 52%,
+        rgba(255, 255, 255, 0.0) 57%,
+        rgba(255, 255, 255, 0.0) 100%);
     background-position: -15vw;
     background-size: 100%;
   }
@@ -651,7 +649,7 @@ p {
   text-align: center;
 }
 
-.services__img *{
+.services__img * {
   flex-shrink: 0;
   max-width: 175px;
   max-height: 175px;
@@ -1016,8 +1014,8 @@ p {
 }
 
 .contact__link img {
-  width: 2vw;
-  height: 2vw;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .contactUs__additional a {
@@ -1265,7 +1263,7 @@ textarea.contactUs__input {
   .techMeans__item {
     max-width: 400px;
   }
-  
+
   .nav,
   .whatsapp__text {
     font-size: 1rem;
@@ -1283,23 +1281,23 @@ textarea.contactUs__input {
   }
 
   .shine {
-    animation-duration: 2s; /* Зменшуємо тривалість анімації */
-    background-size: 200%; /* Збільшуємо розмір фону для плавнішої анімації */
+    animation-duration: 2s;
+    /* Зменшуємо тривалість анімації */
+    background-size: 200%;
+    /* Збільшуємо розмір фону для плавнішої анімації */
   }
 
   @keyframes shineAnimation {
     0% {
       background-repeat: no-repeat;
-      background-image: linear-gradient(
-        135deg, 
-        rgba(255, 255, 255, 0.0) 0%, 
-        rgba(255, 255, 255, 0.0) 45%, 
-        rgba(255, 255, 255, 0.5) 48%, 
-        rgba(255, 255, 255, 0.8) 50%, 
-        rgba(255, 255, 255, 0.5) 52%, 
-        rgba(255, 255, 255, 0.0) 57%, 
-        rgba(255, 255, 255, 0.0) 100%
-      );
+      background-image: linear-gradient(135deg,
+          rgba(255, 255, 255, 0.0) 0%,
+          rgba(255, 255, 255, 0.0) 45%,
+          rgba(255, 255, 255, 0.5) 48%,
+          rgba(255, 255, 255, 0.8) 50%,
+          rgba(255, 255, 255, 0.5) 52%,
+          rgba(255, 255, 255, 0.0) 57%,
+          rgba(255, 255, 255, 0.0) 100%);
       background-position: -100vw;
       background-size: 200%;
     }
@@ -1328,7 +1326,7 @@ textarea.contactUs__input {
   .dangerous__content,
   .workProces__content,
   .advantages__list,
-  .services__items{
+  .services__items {
     gap: var(--spacing-sm);
   }
 
@@ -1517,24 +1515,25 @@ textarea.contactUs__input {
   .carousel {
     max-width: 360px;
   }
+
   .shine {
-    animation-duration: 2s; /* Зменшуємо тривалість анімації */
-    background-size: 200%; /* Збільшуємо розмір фону для плавнішої анімації */
+    animation-duration: 2s;
+    /* Зменшуємо тривалість анімації */
+    background-size: 200%;
+    /* Збільшуємо розмір фону для плавнішої анімації */
   }
 
   @keyframes shineAnimation {
     0% {
       background-repeat: no-repeat;
-      background-image: linear-gradient(
-        135deg, 
-        rgba(255, 255, 255, 0.0) 0%, 
-        rgba(255, 255, 255, 0.0) 45%, 
-        rgba(255, 255, 255, 0.5) 48%, 
-        rgba(255, 255, 255, 0.8) 50%, 
-        rgba(255, 255, 255, 0.5) 52%, 
-        rgba(255, 255, 255, 0.0) 57%, 
-        rgba(255, 255, 255, 0.0) 100%
-      );
+      background-image: linear-gradient(135deg,
+          rgba(255, 255, 255, 0.0) 0%,
+          rgba(255, 255, 255, 0.0) 45%,
+          rgba(255, 255, 255, 0.5) 48%,
+          rgba(255, 255, 255, 0.8) 50%,
+          rgba(255, 255, 255, 0.5) 52%,
+          rgba(255, 255, 255, 0.0) 57%,
+          rgba(255, 255, 255, 0.0) 100%);
       background-position: -100vw;
       background-size: 200%;
     }

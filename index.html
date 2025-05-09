@@ -1,65 +1,141 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="description"
-    content="Evite daños por agua con nuestros servicios profesionales de detección de fugas. Disponibles 24/7. ¡Llámenos ahora!">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios Profesionales de Detección de Fugas - American Leaks Detection</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Detección de Fugas de Agua - American Leaks Detection</title>
+  <meta name="description" content="Detección y reparación de fugas de agua ocultas. ¡Llama ahora, estamos disponibles 24/7!" />
+  <meta name="keywords" content="detección de fugas, fugas de agua, fontanero Marbella, fugas ocultas, reparación de fugas, servicios de fontanería, American Leaks Detection España" />
+  <meta name="author" content="American Leaks Detection" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Microsoft -->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="./ico/ms-icon-144x144.png" />
+  <meta name="msapplication-navbutton-color" content="#ffffff" />
+  <meta name="msapplication-tooltip" content="American Leaks Detection" />
+  <meta name="msapplication-starturl" content="./index.html" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="msapplication-config" content="./ico/browserconfig.xml" />
+  
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="American Leaks Detection" />
+  <meta name="application-name" content="American Leaks Detection" />
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="xzfubv_wblZGLMrTSRF2BDKAZ_hLLCPDNjnLrewBNt4" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es" href="https://amld.es/" />
+  <link rel="alternate" hreflang="en" href="https://amld.es/en/" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="American Leaks Detection" />
-  <meta property="og:description" content="Servicios Profesionales de Detección de Fugas" />
-  <meta property="og:image" content="https://amldes.netlify.app/img/mini-logo-300x288.png" />
-  <meta property="og:url" content="https://amldes.netlify.app/" />
+  <meta property="og:description" content="Detección profesional de fugas de agua ocultas en España." />
+  <meta property="og:image" content="https://amld.es/img/mini-logo-300x288.png" />
+  <meta property="og:url" content="https://amld.es/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="American Leaks Detection" />
   <meta property="og:locale" content="es_ES" />
 
-  <!-- <link rel="preload" as="font" type="font/woff2" href="./fonts/Montserrat-VariableFont_wght.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="./fonts/cyntho-slab-pro-bold.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="./fonts/Cyntho_Slab_Pro_Regular.woff2" crossorigin> -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/normalize.min.css" />
+  <link rel="stylesheet" href="./src/style.min.css" />
+  <link rel="preload" href="/img/hero1.avif" as="image" />
 
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./ico/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="./ico/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./ico/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./ico/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./ico/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./ico/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./ico/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./ico/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./ico/apple-icon-180x180.png" />
+  <link rel="shortcut icon" href="./ico/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./ico/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./ico/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./ico/favicon-16x16.png" />
+  <link rel="icon" type="image/svg+xml" href="./ico/favicon.svg" />
+  <link rel="manifest" href="./ico/site.webmanifest" />
 
-  <link rel="icon" type="image/png" href="./ico/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/svg+xml" href="./ico/favicon.svg">
-  <link rel="shortcut icon" href="./ico/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="./ico/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-title" content="AMERICAN LEAKS DETECTIONS">
-  <link rel="manifest" href="./ico/site.webmanifest">
-
-  <meta name="msapplication-TileColor" content="#931F1B">
-  <meta name="theme-color" content="#ffffff">
+  <!-- Structured Data -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "American Leaks Detection",
-      "description": "Servicios profesionales de detección de fugas para prevenir daños por agua. Disponibles 24/7.",
-      "url": "https://www.amld.es"
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "American Leaks Detection",
+    "description": "Detección y reparación de daños causados por fugas de agua ocultas. ¡Llama ahora, nuestro equipo está disponible 24/7!",
+    "url": "https://www.amld.es",
+    "telephone": "+34 952 78 36 06",
+    "priceRange": "€€",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+34 672 17 50 80",
+      "contactType": "Servicio al Cliente",
+      "areaServed": "ES",
+      "availableLanguage": ["Spanish", "English"]
+    }],
+    "email": "info@amld.es",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Uranio 22, Polígono Industrial La Ermita",
+      "addressLocality": "Marbella",
+      "addressRegion": "Málaga",
+      "postalCode": "29603",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 36.5124,
+      "longitude": -4.8689
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "logo": "https://www.amld.es/img/amld_wl.avif",
+    "image": "https://www.amld.es/img/teams.avif",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100080224553761",
+      "https://www.instagram.com/amldes.es/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Redes Generales" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fuente decorativa" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balnearios, fuentes y lagos artificiales" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lavabo de baño" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sanitarios" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistema de calefacción por suelo radiante" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Calefacción por suelo" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Abrazaderas de tubería" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de fugas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistema de piscina" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Piscinas y jacuzzis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de casa y jardín" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fugas en casas y jardines" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Unidad de aire acondicionado" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Acondicionamiento" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cascada decorativa" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cascadas artificiales y alcantarillas en el sistema" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detector de fugas de gas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detección de fugas de gas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microchip para automatización" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detección de tubos con chip de seguimiento" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cubo de filtración de agua" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medición de fugas mediante balde" } }
+      ]
     }
-    </script>
-  <script>
-    let browserLang = navigator.language || navigator.userLanguage;
-    browserLang = browserLang.split("-")[0];
-    const isEnglish = window.location.pathname.startsWith("/en");
-    const selectedLanguage = localStorage.getItem("selectedLanguage");
-    if (selectedLanguage) {
-      if (selectedLanguage === "/en" && !isEnglish) {
-        window.location.href = "/en";
-      } else if (selectedLanguage === "/" && isEnglish) {
-        window.location.href = "/";
-      }
-    } else {
-      if (!isEnglish && browserLang !== "es") {
-        window.location.href = "/en";
-      }
-    }
+  }
   </script>
-    <link rel="stylesheet" href="./src/normalize.min.css">
-    <link rel="stylesheet" href="./src/style.min.css">
-  <link rel="preload" href="/img/hero1.avif" as="image">
 </head>
+
 
 <body>
   <header class="header">
@@ -648,12 +724,12 @@
       <div class="footer__social">
         <h3>Nuestras redes sociales</h3>
         <div class="social-icons">
-          <a href="https://www.instagram.com" class="social-icon insta" aria-label="Instagram" target="_blank"
+          <a href="https://www.instagram.com/miguel_amld" class="social-icon insta" aria-label="Instagram" target="_blank"
             rel="noopener noreferrer"></a>
-          <a href="https://www.facebook.com" class="social-icon fb" aria-label="Facebook" target="_blank"
+          <a href="https://www.facebook.com/profile.php?id=100080224553761" class="social-icon fb" aria-label="Facebook" target="_blank"
             rel="noopener noreferrer"></a>
-          <a href="https://www.linkedin.com" class="social-icon li" aria-label="LinkedIn" target="_blank"
-            rel="noopener noreferrer"></a>
+          <!-- <a href="https://www.linkedin.com" class="social-icon li" aria-label="LinkedIn" target="_blank"
+            rel="noopener noreferrer"></a> -->
         </div>
       </div>
       <div class="footer__text">

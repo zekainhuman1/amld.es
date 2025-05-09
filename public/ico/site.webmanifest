@@ -1,6 +1,11 @@
 {
   "name": "AMERICAN LEAKS DETECTIONS",
   "short_name": "amld.es",
+  "lang": "es",
+  "description": "Detección y reparación de fugas de agua con equipos americanos. Marbella, 24h.",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/ico/web-app-manifest-192x192.png",

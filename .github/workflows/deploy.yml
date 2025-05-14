@@ -34,9 +34,9 @@ jobs:
       - name: Deploy via FTP with lftp
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          ftp-server: ftp.amld.es
-          ftp-username: amldes2022@amld.es
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ftp.amld.es
+          username: amldes2022@amld.es
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
-          remote-dir: public_html/
+          server-dir: public_html/
           timeout: 60000

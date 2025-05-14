@@ -47,5 +47,4 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
-          log-level: info              # або verbose/debug
           timeout: 60000  

@@ -8,7 +8,7 @@ ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/php-error.log');
 
 // Cloudflare Turnstile секретний ключ
-$turnstileSecret = 'REMOVED'; // ← заміни на свій реальний секретний ключ
+$turnstileSecret = '{{TURNSTILE_SECRET}}';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // 1. Перевірка наявності токена

@@ -26,10 +26,13 @@ jobs:
 
       - name: Copy extra root files into dist/
         run: |
-          cp contact.php dist/
           cp sitemap.xml dist/
           cp manifest.json dist/
           cp .htaccess dist/
+
+      - name: Inject TURNSTILE_SECRET into contact.php
+        run: |
+          sed "s|{{TURNSTILE_SECRET}}|${{ secrets.TURNSTILE_SECRET }}|g" contact.php > dist/contact.php
 
       - name: Deploy via FTP with lftp
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5

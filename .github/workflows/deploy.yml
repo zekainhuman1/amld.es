@@ -37,8 +37,15 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}
-          local-dir: dist/
-          dangerous-clean-slate: false
-          passive: true
-          concurrency: 2
+          port: 21                     # за замовчуванням
+          protocol: ftp                # або ftps/sftp
+          local-dir: dist/             # що заливається
+          server-dir: /public_html  # куди заливається
+          dry-run: false
+          dangerous-clean-slate: false # не видаляти нічого зайвого
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+          log-level: info              # або verbose/debug
+          timeout: 60000  

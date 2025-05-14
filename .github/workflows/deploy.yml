@@ -31,20 +31,12 @@ jobs:
           cp manifest.json dist/
           cp .htaccess dist/
 
-      - name: Deploy to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via FTP with lftp
+        uses: deluan/ftp-deploy-action@v1.2.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 21                     # за замовчуванням
-          protocol: ftp                # або ftps/sftp
-          local-dir: dist/             # що заливається
-          server-dir: /public_html/  # куди заливається
-          dry-run: false
-          dangerous-clean-slate: false # не видаляти нічого зайвого
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-          timeout: 60000  
+          ftp-server: ${{ secrets.FTP_HOST }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/
+          remote-dir: /public_html/
+          options: --parallel=2 --verbose  

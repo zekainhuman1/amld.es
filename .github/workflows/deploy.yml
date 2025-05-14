@@ -32,11 +32,11 @@ jobs:
           cp .htaccess dist/
 
       - name: Deploy via FTP with lftp
-        uses: deluan/ftp-deploy-action@v1.2.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          ftp-server: ${{ secrets.FTP_HOST }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-server: ftp.amld.es
+          ftp-username: amldes2022@amld.es
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
-          remote-dir: /public_html/
-          options: --parallel=2 --verbose  
+          remote-dir: public_html/
+          timeout: 60000

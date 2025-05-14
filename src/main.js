@@ -139,39 +139,91 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Валідація форми
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let phone = document.getElementById("phone").value.trim();
-        let errorMessage = document.getElementById("errorMessage");
+    // Пошта
+    document.getElementById('contactForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
 
-        errorMessage.textContent = "";
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const privacyChecked = document.getElementById('privacyPolicy').checked;
+        const errorElem = document.getElementById('errorMessage');
+
+        errorElem.textContent = '';
+        errorElem.style.color = '';
 
         if (!name) {
-            errorMessage.textContent = "Name is required.";
-            event.preventDefault();
+            errorElem.textContent = "Name is required.";
+            errorElem.style.color = 'red';
             return;
         }
 
         if (!email && !phone) {
-            errorMessage.textContent = "Either Email or Phone is required.";
-            event.preventDefault();
+            errorElem.textContent = "Either email or phone is required.";
+            errorElem.style.color = 'red';
             return;
         }
 
         if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            errorMessage.textContent = "Invalid Email format.";
-            event.preventDefault();
+            errorElem.textContent = "Invalid email format.";
+            errorElem.style.color = 'red';
             return;
         }
 
         if (phone && !/^\d{10,}$/.test(phone)) {
-            errorMessage.textContent = "Phone must contain at least 10 digits.";
-            event.preventDefault();
+            errorElem.textContent = "Phone must contain at least 10 digits.";
+            errorElem.style.color = 'red';
             return;
         }
+
+        if (!privacyChecked) {
+            errorElem.textContent = "You must agree to the privacy policy.";
+            errorElem.style.color = 'red';
+            return;
+        }
+
+        // Отримати токен Turnstile
+        const turnstileToken = document.querySelector('textarea[name="cf-turnstile-response"]')?.value;
+
+        if (!turnstileToken) {
+            errorElem.textContent = "Verification failed. Please try again.";
+            errorElem.style.color = 'red';
+            return;
+        }
+
+        const honeypot = document.getElementById('website').value;
+
+        if (honeypot) {
+            errorElem.textContent = "Spam detected.";
+            errorElem.style.color = 'red';
+            return;
+        }
+
+        const formData = new FormData(this);
+        formData.append("cf-turnstile-response", turnstileToken);
+
+        try {
+            const response = await fetch('./contact.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                this.reset();
+                errorElem.textContent = "Message sent successfully!";
+                errorElem.style.color = 'green';
+            } else {
+                errorElem.textContent = result.error || "An error occurred.";
+                errorElem.style.color = 'red';
+            }
+        } catch (err) {
+            errorElem.textContent = "The server is not responding. Please try again later.";
+            errorElem.style.color = 'red';
+        }
     });
+
 
     // керування бургер-меню
     const burgerMenu = document.querySelector('.burger-menu');

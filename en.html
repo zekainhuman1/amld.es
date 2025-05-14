@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <title>Professional Leak Detection Services - American Leaks Detection</title>
   <meta name="description" content="Detection and repair of hidden water leaks. Call now, we’re available 24/7." />
-  <meta name="keywords" content="water leak detection, Marbella plumbing, American Leaks Detection, leak repair, hidden leaks, water leak services Spain, emergency plumber Marbella" />
+  <meta name="keywords"
+    content="water leak detection, Marbella plumbing, American Leaks Detection, leak repair, hidden leaks, water leak services Spain, emergency plumber Marbella" />
   <meta name="author" content="American Leaks Detection" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
-  
+
   <!-- Microsoft -->
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-TileImage" content="./ico/ms-icon-144x144.png" />
@@ -19,20 +21,20 @@
   <meta name="msapplication-starturl" content="./index.html" />
   <meta name="msapplication-tap-highlight" content="no" />
   <meta name="msapplication-config" content="./ico/browserconfig.xml" />
-  
+
   <!-- Apple -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="American Leaks Detection" />
   <meta name="application-name" content="American Leaks Detection" />
-  
+
   <!-- Verification -->
   <meta name="google-site-verification" content="xzfubv_wblZGLMrTSRF2BDKAZ_hLLCPDNjnLrewBNt4" />
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="es" href="https://amld.es/" />
   <link rel="alternate" hreflang="en" href="https://amld.es/en/" />
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content="American Leaks Detection" />
   <meta property="og:description" content="Professional Leak Detection Services" />
@@ -41,12 +43,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="American Leaks Detection" />
   <meta property="og:locale" content="en_ES" />
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="./src/normalize.min.css" />
   <link rel="stylesheet" href="./src/style.min.css" />
   <link rel="preload" href="/img/hero1.avif" as="image" />
-  
+
   <!-- Icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="./ico/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="./ico/apple-icon-60x60.png" />
@@ -63,7 +65,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="./ico/favicon-96x96.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./ico/favicon-16x16.png" />
   <link rel="icon" type="image/svg+xml" href="./ico/favicon.svg" />
-  <link rel="manifest" href="./ico/site.webmanifest" />
+  <link rel="manifest" href="./manifest.json" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -97,8 +99,8 @@
       "longitude": -4.8689
     },
     "openingHours": "Mo-Su 00:00-23:59",
-    "logo": "https://www.amld.es/img/amld_wl.avif",
-    "image": "https://www.amld.es/img/teams.avif",
+    "logo": "https://www.amld.es/img/amld_wl@2x.png",
+    "image": "https://www.amld.es/img/teams.jpg",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=100080224553761",
       "https://www.instagram.com/amldes.es/"
@@ -143,9 +145,15 @@
       <div class="header__logo">
         <a href="/en" aria-label="Home">
           <picture class="header__img">
-            <source srcset="./img/amld_wl.avif" type="image/avif">
-            <source srcset="./img/amld_wl.webp" type="image/webp">
-            <img src="./img/amld_wl.png" width="160" height="55" alt="AMERICAN LEAKS DETECTIONS">
+            <!-- AVIF Retina -->
+            <source srcset="./img/amld_wl.avif 1x, ./img/amld_wl@2x.avif 2x" type="image/avif">
+
+            <!-- WebP Retina -->
+            <source srcset="./img/amld_wl.webp 1x, ./img/amld_wl@2x.webp 2x" type="image/webp">
+
+            <!-- PNG fallback Retina -->
+            <img src="./img/amld_wl.png" srcset="./img/amld_wl.png 1x, ./img/amld_wl@2x.png 2x" width="160" height="55"
+              alt="AMERICAN LEAKS DETECTIONS">
           </picture>
         </a>
       </div>
@@ -154,15 +162,21 @@
         <li class="nav__menu-item" role="none"><a href="#aboutUs" role="menuitem">About Us</a></li>
         <li class="nav__menu-item" role="none"><a href="#techMeans" role="menuitem">Tech means</a></li>
         <li class="nav__menu-item" role="none"><a href="#contactUs" role="menuitem">Contact Us</a></li>
-        <li class="burger-menu__callNow shine" aria-label="Call Now">
-          <img class="whatsapp__img" src="/svg/whatsapp2.svg" alt="whatsapp call now"><span>Call Now</span>
+        <li role="none">
+          <a href="https://wa.me/message/DGPSDLI4ONGJD1" class="burger-menu__callNow shine" aria-label="Call Now"
+            role="menuitem" tabindex="0" target="_blank" rel="noopener noreferrer">
+            <img class="whatsapp__img" src="/svg/whatsapp2.svg" alt="whatsapp call now">
+            <span>Call Now</span>
+          </a>
         </li>
       </ul>
+
       <div class="whatsapp">
-        <button class="whatsapp__button" aria-label="Contact us on WhatsApp">
-          <img class="whatsapp__img" src="/svg/whatsapp2.svg" alt="whatsapp call now"><span
-            class="whatsapp__text">WhatsApp</span>
-        </button>
+        <a href="https://wa.me/message/DGPSDLI4ONGJD1" class="whatsapp__button" aria-label="Contact us on WhatsApp"
+          role="button" tabindex="0" target="_blank" rel="noopener noreferrer">
+          <img class="whatsapp__img" src="/svg/whatsapp2.svg" alt="whatsapp call now">
+          <span class="whatsapp__text">WhatsApp</span>
+        </a>
       </div>
       <button class="lang" id="languageSwitcher" aria-label="Change language">
         <picture>
@@ -183,15 +197,22 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__content">
         <div class="hero__title">
-          <h1 class="title" id="hero-title">Detection of water <span class="first">leaks<span class="second">leaks</span></span>
+          <h1 class="title" id="hero-title">Detection of water <span class="first">leaks<span
+                class="second">leaks</span></span>
             with American equipment</h1>
           <p class="hero__text">Detection and repair of damage caused by hidden water leaks! <br>
             Call now, our team is ready to help <b>24&nbsp;hours</b>&nbsp;a&nbsp;day.</p>
         </div>
         <div class="hero__buttons">
-          <button class="callNow shine" aria-label="Call Now">
-            <img class="whatsapp__img" src="/svg/whatsapp2.svg" alt="whatsapp call now"><span>Call Now</span></button>
-          <button class="messageUs" aria-label="Contact Us"><a href="#contactUs">Contact Us</a></button>
+          <a href="https://wa.me/message/DGPSDLI4ONGJD1" class="callNow shine" aria-label="Call Now" role="button"
+            tabindex="0" target="_blank" rel="noopener noreferrer">
+            <img class="whatsapp__img" src="/svg/whatsapp2.svg" alt="whatsapp call now">
+            <span>Call Now</span>
+          </a>
+
+          <a href="#contactUs" class="messageUs" aria-label="Contact Us" role="button" tabindex="0">
+            Contact Us
+          </a>
         </div>
       </div>
       <div class="carousel">
@@ -199,32 +220,32 @@
           <picture class="carousel__item">
             <source srcset="/img/hero1.avif" type="image/avif">
             <source srcset="/img/hero1.webp" type="image/webp">
-            <img src="/img/hero1.jpg" width="558" height="500" alt="hero image">
+            <img src="/img/hero1.jpg" width="558" height="500" alt="hero image" fetchpriority="high">
           </picture>
           <picture class="carousel__item">
             <source srcset="/img/hero2.avif" type="image/avif">
             <source srcset="/img/hero2.webp" type="image/webp">
-            <img src="/img/hero2.jpg" width="558" height="500" alt="hero image" loading="lazy">
+            <img src="/img/hero2.jpg" width="558" height="500" alt="hero image">
           </picture>
           <picture class="carousel__item">
             <source srcset="/img/hero3.avif" type="image/avif">
             <source srcset="/img/hero3.webp" type="image/webp">
-            <img src="/img/hero3.jpg" width="558" height="500" alt="hero image" loading="lazy">
+            <img src="/img/hero3.jpg" width="558" height="500" alt="hero image">
           </picture>
           <picture class="carousel__item">
             <source srcset="/img/hero4.avif" type="image/avif">
             <source srcset="/img/hero4.webp" type="image/webp">
-            <img src="/img/hero4.jpg" width="558" height="500" alt="hero image" loading="lazy">
+            <img src="/img/hero4.jpg" width="558" height="500" alt="hero image">
           </picture>
           <picture class="carousel__item">
             <source srcset="/img/hero5.avif" type="image/avif">
             <source srcset="/img/hero5.webp" type="image/webp">
-            <img src="/img/hero5.jpg" width="558" height="500" alt="hero image" loading="lazy">
+            <img src="/img/hero5.jpg" width="558" height="500" alt="hero image">
           </picture>
           <picture class="carousel__item">
             <source srcset="/img/hero6.avif" type="image/avif">
             <source srcset="/img/hero6.webp" type="image/webp">
-            <img src="/img/hero6.jpg" width="558" height="500" alt="hero image" loading="lazy">
+            <img src="/img/hero6.jpg" width="558" height="500" alt="hero image">
           </picture>
         </div>
         <div class="carousel__pagination"></div>
@@ -681,23 +702,34 @@
       </div>
       <form class="contactUs__form" id="contactForm" aria-labelledby="contactUs-title">
         <label for="name" class="visually-hidden">Name</label>
-        <input type="text" class="contactUs__input" id="name" placeholder="Name" aria-required="true">
+        <input type="text" name="name" class="contactUs__input" id="name" placeholder="Name" aria-required="true">
+
         <label for="email" class="visually-hidden">Email</label>
-        <input type="email" class="contactUs__input" id="email" placeholder="Email" aria-required="true">
+        <input type="email" name="email" class="contactUs__input" id="email" placeholder="Email" aria-required="true">
+
         <label for="phone" class="visually-hidden">Phone</label>
-        <input type="tel" class="contactUs__input" id="phone" placeholder="Phone" aria-required="true">
+        <input type="tel" name="phone" class="contactUs__input" id="phone" placeholder="Phone" aria-required="true">
+
         <label for="message" class="visually-hidden">Message</label>
-        <textarea class="contactUs__input" id="message" placeholder="Message" aria-required="true"></textarea>
+        <textarea name="message" class="contactUs__input" id="message" placeholder="Message"
+          aria-required="true"></textarea>
+
+        <div style="display: none;">
+          <label for="website">Do not fill this field</label>
+          <input type="text" name="website" id="website" autocomplete="off" tabindex="-1">
+        </div>
+
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAABc7APMYAA4kG4eV"></div>
+
         <button type="submit" class="contactUs__button">Send</button>
         <p class="contactUs__error" id="errorMessage" aria-live="polite" role="alert"></p>
+
         <label class="contactUs__privacy">
           <input type="checkbox" id="privacyPolicy" checked aria-required="true">
-          <span>By submitting this form, you agree to our <a href="/privacy-policy">Privacy&nbsp;Policy</a>. Your
-            personal
-            data (name, email, phone number) will be used solely for the purpose of contacting you regarding your
-            inquiry. We value your privacy and will not share your information with third parties.</span>
+          <span>By submitting this form, you agree to our <a href="/privacy-policy">Privacy&nbsp;Policy</a>...</span>
         </label>
       </form>
+
     </section>
 
   </main>
@@ -707,10 +739,10 @@
       <div class="footer__social">
         <h3>Our social media</h3>
         <div class="social-icons">
-          <a href="https://www.instagram.com/miguel_amld" class="social-icon insta" aria-label="Instagram" target="_blank"
-            rel="noopener noreferrer"></a>
-          <a href="https://www.facebook.com/profile.php?id=100080224553761" class="social-icon fb" aria-label="Facebook" target="_blank"
-            rel="noopener noreferrer"></a>
+          <a href="https://www.instagram.com/miguel_amld" class="social-icon insta" aria-label="Instagram"
+            target="_blank" rel="noopener noreferrer"></a>
+          <a href="https://www.facebook.com/profile.php?id=100080224553761" class="social-icon fb" aria-label="Facebook"
+            target="_blank" rel="noopener noreferrer"></a>
           <!-- <a href="https://www.linkedin.com" class="social-icon li" aria-label="LinkedIn" target="_blank"
             rel="noopener noreferrer"></a> -->
         </div>
@@ -798,7 +830,8 @@
     </div>
   </div>
 
-  <script type="module" src="/src/main.min.js"></script>
+  <script type="module" src="/src/main.min.js" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 
 </html>

@@ -93,6 +93,11 @@
   height: auto;
 }
 
+.header__img img {
+  width: 160px;
+  height: 55px;
+}
+
 .nav,
 .whatsapp__text {
   font-family: Cyntho, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -164,13 +169,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
-
+  text-decoration: none;
 }
 
 .whatsapp__button:last-child {
   margin-right: 0px;
   position: relative;
+  text-decoration: none;
 }
 
 .whatsapp__text {
@@ -592,7 +597,7 @@ p {
 }
 
 .aboutUs__content {
-  width: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1460,6 +1465,7 @@ textarea.contactUs__input {
   }
 
   .aboutUs__content {
+    width: 100%;
     max-height: 100%;
     padding: 0;
   }
@@ -1486,11 +1492,11 @@ textarea.contactUs__input {
     flex-direction: column;
     background-color: var(--color-accent);
     position: absolute;
-    top: 8vh;
+    top: 60px;
     right: 0;
     font-size: 1.5rem;
     width: 100%;
-    height: calc(100vh - 8vh);
+    height: calc(100vh - 58px);
     justify-content: center;
     align-items: center;
     gap: var(--spacing-lg);

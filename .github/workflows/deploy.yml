@@ -39,3 +39,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
           local-dir: dist/
+          dangerous-clean-slate: false
+          passive: true
+          concurrency: 2

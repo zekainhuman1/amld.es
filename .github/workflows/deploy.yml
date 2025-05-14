@@ -40,7 +40,7 @@ jobs:
           port: 21                     # за замовчуванням
           protocol: ftp                # або ftps/sftp
           local-dir: dist/             # що заливається
-          server-dir: /public_html  # куди заливається
+          server-dir: /public_html/  # куди заливається
           dry-run: false
           dangerous-clean-slate: false # не видаляти нічого зайвого
           exclude: |

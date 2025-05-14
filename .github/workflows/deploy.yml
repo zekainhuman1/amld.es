@@ -3,7 +3,7 @@ name: Deploy Vite site via FTP
 on:
   push:
     branches:
-      - main  # або master, якщо в тебе інша гілка
+      - master
 
 jobs:
   build-and-deploy:
